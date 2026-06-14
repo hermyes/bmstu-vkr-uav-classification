@@ -26,8 +26,6 @@ dist/
 .ruff_cache/
 
 # Local outputs
-models/*.pkl
-models/**/*.pkl
 reports/figures/
 reports/metrics/
 reports/features/
