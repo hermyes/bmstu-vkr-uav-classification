@@ -1,0 +1,20 @@
+preprocessing:
+  target_sample_rate: 22050
+  mono: true
+  normalize: true
+  apply_bandpass: true
+  low_freq: 80.0
+  high_freq: 8000.0
+  filter_order: 5
+
+segmentation:
+  window_sec: 3.0
+  hop_sec: 1.5
+  pad_end: false
+
+heuristic:
+  alpha: 1.5
+  min_peaks: 3
+  band_low_freq: 80.0
+  band_high_freq: 8000.0
+  min_peak_height_ratio: 0.2

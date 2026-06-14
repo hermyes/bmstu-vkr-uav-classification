@@ -1,0 +1,6 @@
+dataset:
+  root_dir: train_sounds/dataset_out
+  label_map: label_map.json
+  train_manifest: train/manifest.json
+  val_manifest: val/manifest.json
+  test_manifest: test/manifest.json

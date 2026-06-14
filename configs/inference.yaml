@@ -1,0 +1,47 @@
+preprocessing:
+  target_sample_rate: 22050
+  mono: true
+  normalize: true
+  apply_bandpass: true
+  low_freq: 80.0
+  high_freq: 8000.0
+  filter_order: 5
+
+segmentation:
+  window_sec: 3.0
+  hop_sec: 1.5
+  pad_end: false
+
+heuristic:
+  alpha: 1.5
+  min_peaks: 3
+  band_low_freq: 80.0
+  band_high_freq: 8000.0
+  min_peak_height_ratio: 0.2
+
+features:
+  mfcc:
+    n_mfcc: 20
+    use_delta: true
+    use_delta_delta: true
+  rms:
+    enabled: true
+  spectral:
+    use_centroid: true
+    use_bandwidth: true
+    use_rolloff: true
+    use_zcr: true
+  band_energy:
+    enabled: true
+    bands:
+      - [80, 300]
+      - [300, 1000]
+      - [1000, 3000]
+      - [3000, 8000]
+  spectral_peaks:
+    enabled: true
+    n_peaks: 5
+    min_peak_height_ratio: 0.2
+
+decision:
+  confidence_threshold: 0.65

@@ -14,3 +14,21 @@ __pycache__/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local outputs
+models/*.pkl
+models/**/*.pkl
+reports/figures/
+reports/metrics/
+reports/features/
+*.log

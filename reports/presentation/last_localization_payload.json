@@ -1,0 +1,9 @@
+{
+  "message_type": "localization_v1",
+  "target_detected": true,
+  "signal_level": 0.23607414960861206,
+  "time_start": 0.0,
+  "time_end": 1.0,
+  "channel_levels": null,
+  "tdoa_ready": false
+}

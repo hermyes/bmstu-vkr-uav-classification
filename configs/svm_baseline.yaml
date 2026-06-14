@@ -1,0 +1,71 @@
+dataset:
+  root_dir: train_sounds/dataset_out_3sec
+  label_map: label_map.json
+  train_manifest: train/manifest.json
+  val_manifest: val/manifest.json
+  test_manifest: test/manifest.json
+
+preprocessing:
+  target_sample_rate: 22050
+  mono: true
+  normalize: true
+  apply_bandpass: true
+  low_freq: 80.0
+  high_freq: 8000.0
+  filter_order: 5
+
+features:
+  mfcc:
+    n_mfcc: 20
+    use_delta: true
+    use_delta_delta: true
+  rms:
+    enabled: true
+  spectral:
+    use_centroid: true
+    use_bandwidth: true
+    use_rolloff: true
+    use_zcr: true
+  band_energy:
+    enabled: true
+    bands:
+      - [80, 300]
+      - [300, 1000]
+      - [1000, 3000]
+      - [3000, 8000]
+  spectral_peaks:
+    enabled: true
+    n_peaks: 5
+    min_peak_height_ratio: 0.2
+
+segmentation:
+  window_sec: 3.0
+  hop_sec: 1.5
+  pad_end: false
+
+heuristic:
+  alpha: 1.5
+  min_peaks: 3
+  band_low_freq: 80.0
+  band_high_freq: 8000.0
+  min_peak_height_ratio: 0.2
+
+model:
+  class_weight: balanced
+  calibrate_probabilities: true
+  calibration_cv: 3
+  grid_search:
+    cv: 3
+    scoring: f1_macro
+    param_grid:
+      C: [0.1, 1.0, 10.0, 50.0]
+      gamma: ["scale", 0.1, 0.01]
+      kernel: ["rbf", "linear"]
+
+training:
+  random_seed: 42
+  n_jobs: -1
+
+output:
+  models_dir: models
+  reports_dir: reports

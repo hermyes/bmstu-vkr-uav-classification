@@ -1,0 +1,73 @@
+{
+  "target_type": "background",
+  "label_id": 0,
+  "raw_label_id": 0,
+  "raw_label_name": "background",
+  "confidence": 0.8976556750211708,
+  "signal_level": 0.23607414960861206,
+  "time_start": 0.0,
+  "time_end": 1.0,
+  "selected_windows": 0,
+  "selected_window_index": 0,
+  "decision": "accepted",
+  "guidance_message": {
+    "target_type": "background",
+    "confidence": 0.8976556750211708,
+    "time_start": 0.0,
+    "time_end": 1.0,
+    "decision": "accepted"
+  },
+  "localization_message": {
+    "signal_level": 0.23607414960861206,
+    "time_start": 0.0,
+    "time_end": 1.0,
+    "channel_levels": null
+  },
+  "diagnostics": {
+    "sample_rate": 22050,
+    "duration_sec": 1.0,
+    "num_windows": 1,
+    "window_sec": 1.0,
+    "hop_sec": 0.5,
+    "class_probabilities": {
+      "background": 0.8976556750211708,
+      "helicopter": 0.09849250157900435,
+      "airplane": 0.0026234114229850784,
+      "drone": 0.0012284119768398542
+    },
+    "heuristic": {
+      "selected": false,
+      "energy_threshold": 0.05573100596666336,
+      "band_threshold": 1706.8616163390059,
+      "selected_window_details": {
+        "index": 0,
+        "time_start": 0.0,
+        "time_end": 1.0,
+        "duration_sec": 1.0,
+        "rms": 0.23607414960861206,
+        "energy": 0.05573100596666336,
+        "band_energy": 1706.8616163390059,
+        "num_spectral_peaks": 556,
+        "score": 185.33333333333334,
+        "passed_thresholds": false,
+        "is_selected": true
+      },
+      "window_details": [
+        {
+          "index": 0,
+          "time_start": 0.0,
+          "time_end": 1.0,
+          "duration_sec": 1.0,
+          "rms": 0.23607414960861206,
+          "energy": 0.05573100596666336,
+          "band_energy": 1706.8616163390059,
+          "num_spectral_peaks": 556,
+          "score": 185.33333333333334,
+          "passed_thresholds": false,
+          "is_selected": true
+        }
+      ]
+    }
+  },
+  "audio_path": "C:\\Users\\aslan\\Desktop\\МГТУ\\ВКР\\BMSTU-VKR-UAV-Classification\\train_sounds\\dataset_out\\test\\audio\\000000.wav"
+}

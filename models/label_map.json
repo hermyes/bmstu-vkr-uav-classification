@@ -1,0 +1,6 @@
+{
+  "background": 0,
+  "drone": 1,
+  "helicopter": 2,
+  "airplane": 3
+}

@@ -1,0 +1,15 @@
+{
+  "message_type": "guidance_v1",
+  "target_detected": true,
+  "target_type": "background",
+  "target_label_id": 0,
+  "raw_model_type": "background",
+  "raw_model_label_id": 0,
+  "confidence": 0.8976556750211708,
+  "confidence_threshold": 0.65,
+  "decision": "accepted",
+  "decision_reason": "target_confirmed",
+  "guidance_profile_key": "noise_reject_profile",
+  "time_start": 0.0,
+  "time_end": 1.0
+}
